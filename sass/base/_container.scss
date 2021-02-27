@@ -1,26 +1,55 @@
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
 
-  .footer & {
-    display: flex;
-    align-items: baseline;
-  }
+.header .site-nav {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .hero & {
-    display: flex;
-    justify-content: center;
-  }
-
-  .buttons & {
-    display: flex;
-    display: block;
-  }
-
-  .our-clients & {
-    display: flex;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+//.container {
+//  width: 1200px;
+//  padding-left: 15px;
+//  padding-right: 15px;
+//  margin: 0 auto;
+//  box-sizing: border-box;
+//
+//  .footer & {
+//    display: flex;
+//    align-items: baseline;
+//  }
+//
+//  .hero & {
+// //   display: flex;
+// //   justify-content: center;
+//  }
+//
+//  .buttons & {
+//    display: flex;
+//    display: block;
+//  }
+//
+//  .our-clients & {
+//    display: flex;
+//  }
+//}
