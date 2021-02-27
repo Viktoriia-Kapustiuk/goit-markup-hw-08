@@ -1,0 +1,33 @@
+.auth-nav {
+  margin-left: auto;
+  & .auth-nav-item + .auth-nav-item {
+    margin-left: 30px;
+  }
+}
+.auth-nav-list {
+  display: flex;
+}
+
+.auth-nav-item {
+  @extend %flex;
+  margin-left: auto;
+
+  transition: fill, 250ms, var(--cub);
+
+  &:hover > svg,
+  &:focus > svg {
+    fill: var(--accent-color);
+  }
+}
+
+.contacts-icon.convert {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.contacts-icon.tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
