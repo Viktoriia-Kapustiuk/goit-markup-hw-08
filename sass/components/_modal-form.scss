@@ -1,5 +1,7 @@
 /* Modal Window */
 
+@media screen and (min-width: 480px) {
+}
 .backdrop {
   position: fixed;
   width: 100%;
@@ -21,8 +23,8 @@
   padding: 40px;
 
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -113,8 +115,8 @@
   margin-bottom: 30px;
   font-family: var(--text-font);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1, 71;
+  font-size: 12px;
+  line-height: 1, 17;
 
   letter-spacing: 0.03em;
   color: var(--main-color);
@@ -164,8 +166,8 @@
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  min-width: 448px;
-  height: 23px;
+  min-width: 370px;
+  height: 60px;
 
   margin-bottom: 12px;
 }

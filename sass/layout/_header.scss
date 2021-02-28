@@ -2,12 +2,11 @@
 //.header {
 //  border-bottom: 1px solid #ececec;
 //}
-//.header-nav {
-//  text-align: center;
-//  display: flex;
-//}
+.header-nav {
+  display: flex;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .auth-nav-list {
     display: none;
   }
@@ -18,10 +17,16 @@
   padding-bottom: 10px;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
 .burger-btn {
   background-color: transparent;
   padding: 0;
   border: none;
+  margin-left: auto;
 }
 
 .burger-menu {
@@ -36,7 +41,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
   width: 100%;
-  height: 100%;
+  height: 796px;
   max-width: 480px;
   background-color: #fff;
 
@@ -44,7 +49,7 @@
 }
 
 .mobile-menu-nav {
-  padding-bottom: 80px;
+  margin-bottom: 302px;
 }
 
 .mobile-menu.is-open {
@@ -55,18 +60,24 @@
   position: absolute;
   top: 21px;
   right: 25px;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   padding: 0;
+  text-align: center;
+  justify-content: center;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .icon-cross {
   width: 19px;
   height: 19px;
 
-  &:hover,
-  &:focus {
+  .mobile-close-btn:hover &,
+  .mobile-close-btn:focus & {
     fill: var(--accent-color);
   }
 }
@@ -95,6 +106,7 @@
 }
 
 .mobile-link-tel {
+  display: flex;
   font-style: Roboto;
   font-weight: 500;
   font-size: 34px;
@@ -103,11 +115,12 @@
 
   letter-spacing: 0.02em;
 
-  color: #2196f3;
+  color: var(--accent-color);
   margin-bottom: 32px;
 }
 
-.mobile-item-mail {
+.mobile-link-mail {
+  display: inline-block;
   font-family: Roboto;
   font-weight: 500;
   font-size: 24px;
@@ -125,10 +138,10 @@
   padding-bottom: 64px;
 }
 
-.mobile-list {
-  display: flex;
-  padding-left: -10px;
-}
+// .mobile-list {
+//   display: flex;
+//   padding-left: -10px;
+// }
 
 .mobile-item {
   display: inline-flex;
@@ -166,13 +179,7 @@
   .header {
     height: 80px;
   }
-  .header-nav {
-    display: flex;
-  }
   .auth-nav-list {
     display: inline-block;
   }
-  // .auth-nav-item {
-  //   align-items: start;
-  // }
 }

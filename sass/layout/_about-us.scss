@@ -59,3 +59,9 @@
   text-transform: uppercase;
   color: var(--white-text-color);
 }
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .about-us {
+    display: none;
+  }
+}

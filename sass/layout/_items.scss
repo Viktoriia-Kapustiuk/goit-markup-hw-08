@@ -1,20 +1,78 @@
 /* items */
-.items {
-  padding: 94px 0;
+// .items {
+//   padding: 94px 0;
+// }
+
+// .items-list {
+//   // display: flex;
+
+//   margin-right: -30px;
+//   margin-bottom: -30px;
+//   min-width: 1170px;
+// }
+// .items-list-item {
+//   margin-right: 30px;
+//   margin-bottom: 30px;
+//   flex-basis: calc(100% / 4-30);
+//   width: 270px;
+
+//   &::before {
+//     content: "";
+//     display: block;
+
+//     height: 120px;
+//     background: #f5f4fa;
+//     border-radius: 4px;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: 70px;
+//   }
+// }
+
+// .items-title {
+//   @include font($fw: 700);
+//   margin-top: 30px;
+//   margin-bottom: 10px;
+//   font-family: var(--text-font);
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+//   color: var(--title-color);
+// }
+
+// .icon-antenna::before {
+//   background-image: url(../images/antenna.png);
+// }
+
+// .icon-clock::before {
+//   background-image: url(../images/clock.png);
+// }
+
+// .icon-diagram::before {
+//   background-image: url(../images/diagram.png);
+// }
+
+// .icon-astronaut::before {
+//   background-image: url(../images/astronaut.png);
+// }
+
+// .items-text {
+//   font-family: var(--text-font);
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 1.71;
+//   letter-spacing: 0.03em;
+//   color: var(--main-color);
+// }
+
+@media screen and (min-width: 480px) {
+  .items {
+    max-width: 480px;
+  }
 }
 
-.items-list {
-  display: flex;
-
-  margin-right: -30px;
-  margin-bottom: -30px;
-  min-width: 1170px;
-}
 .items-list-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc(100% / 4-30);
-  width: 270px;
+  margin: 0;
+  width: 100%;
 
   &::before {
     content: "";
@@ -37,6 +95,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  text-align: center;
 }
 
 .icon-antenna::before {
@@ -62,4 +121,5 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-color);
+  margin-bottom: 30px;
 }
