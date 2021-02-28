@@ -91,13 +91,10 @@
 
 .our-team {
   width: 450px;
-  height: 2761px;
-}
-
-.our-team-guys {
-  padding-top: 60px;
+  padding-top: 60px 15px;
   background-color: #f5f4fa;
 }
+
 .our-team-title {
   font-family: var(--text-font);
   font-weight: 700;
@@ -111,7 +108,26 @@
   color: var(--title-color);
 }
 
+.our-team-list-item {
+  width: 450px;
+}
+
 .our-team-list-item-img {
   width: 450px;
   height: 460px;
+  margin-bottom: 30px;
+}
+
+.our-team-title-names {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+  margin-bottom: 10px;
 }

@@ -62,7 +62,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 
@@ -280,7 +280,7 @@ body {
   width: 134px;
   height: 28px;
   font-size: 24px;
-  line-height: 1.17px;
+  line-height: 1.17;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -731,11 +731,7 @@ body {
 /* our team */
 .our-team {
   width: 450px;
-  height: 2761px;
-}
-
-.our-team-guys {
-  padding-top: 60px;
+  padding-top: 60px 15px;
   background-color: #f5f4fa;
 }
 
@@ -750,8 +746,25 @@ body {
   color: var(--title-color);
 }
 
+.our-team-list-item {
+  width: 450px;
+}
+
 .our-team-list-item-img {
   width: 450px;
   height: 460px;
+  margin-bottom: 30px;
+}
+
+.our-team-title-names {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=portfolio.css.map */
