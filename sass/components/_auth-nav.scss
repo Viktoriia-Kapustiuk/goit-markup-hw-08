@@ -1,12 +1,9 @@
 .auth-nav {
-  display: none;
+  // display: none;
   margin-left: auto;
   & .auth-nav-item + .auth-nav-item {
     margin-left: 30px;
   }
-}
-.auth-nav-list {
-  display: flex;
 }
 
 .auth-nav-item {
