@@ -90,9 +90,24 @@
 // }
 
 .our-team {
-  width: 450px;
-  padding-top: 60px 15px;
+  padding-top: 60px;
   background-color: #f5f4fa;
+}
+
+.our-team-list-item {
+  width: 450px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--white-text-color);
+  border-radius: 0px 0px 4px 4px;
+}
+.our-team-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.our-team-text {
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .our-team-title {
@@ -100,6 +115,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
+  margin-bottom: 30px;
   /* identical to box height */
 
   text-align: center;
@@ -108,14 +124,9 @@
   color: var(--title-color);
 }
 
-.our-team-list-item {
-  width: 450px;
-}
-
 .our-team-list-item-img {
   width: 450px;
   height: 460px;
-  margin-bottom: 30px;
 }
 
 .our-team-title-names {
@@ -130,4 +141,65 @@
 
   color: var(--title-color);
   margin-bottom: 10px;
+}
+
+.our-team-positions {
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+.icon-list {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  margin: 0 auto;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(-n + 4) {
+    margin-bottom: 0px;
+  }
+}
+
+.icon-list-item {
+  display: inline-block;
+  display: flex;
+
+  text-decoration: none;
+  margin-right: 10px;
+  flex-basis: calc(100% / 4-30);
+}
+
+.icon-link {
+  @extend %flex;
+  @extend %text-align;
+
+  width: 44px;
+  height: 44px;
+  color: var(--icons-color);
+  background-color: var(--white-text-color);
+  border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-text-color);
+  }
+}
+
+.icon-img {
+  display: flex;
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
 }
