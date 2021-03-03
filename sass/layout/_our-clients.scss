@@ -1,20 +1,20 @@
 /* Our Clients */
 
-.our-clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+// .our-clients {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
 
-.our-clients-descr {
-  display: flex;
-  text-align: center;
-  display: inline-block;
-}
+// .our-clients-descr {
+//   display: flex;
+//   text-align: center;
+//   display: inline-block;
+// }
 
-.our-client-list {
-  display: flex;
-  margin-right: -30px;
-}
+// .our-client-list {
+//   display: flex;
+//   margin-right: -30px;
+// }
 
 .our-clients-item {
   display: inline-block;
@@ -59,4 +59,17 @@
   &:focus {
     color: var(--accent-color);
   }
+}
+
+.our-client-list {
+  display: flex;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
+}
+
+.our-clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
