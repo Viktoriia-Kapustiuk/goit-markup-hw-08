@@ -49,7 +49,6 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -431,6 +430,10 @@ body {
 }
 
 /* header*/
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .auth-nav-list {
   display: none;
 }
@@ -608,20 +611,15 @@ body {
 
 /* Hero Portfolio*/
 .nav-menu {
-  text-align: center;
-}
-
-.buttons-list {
-  display: block;
-  margin-bottom: 50px;
-}
-
-.buttons-list-item {
-  display: inline-block;
-}
-
-.buttons-list-item:not(:last-child) {
-  margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 40px;
 }
 
 .buttons-list-item-btn {

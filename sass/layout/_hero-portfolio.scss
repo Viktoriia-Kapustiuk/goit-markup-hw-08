@@ -1,20 +1,35 @@
 /* Hero Portfolio*/
 
-.nav-menu {
-  text-align: center;
-}
+// .nav-menu {
+//   text-align: center;
+// }
+// .buttons-list {
+//   display: block;
+
+//   margin-bottom: 50px;
+// }
+// .buttons-list-item {
+//   display: inline-block;
+
+//   &:not(:last-child) {
+//     margin-right: 8px;
+//   }
+// }
+
 .buttons-list {
-  display: block;
-
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
 }
-.buttons-list-item {
-  display: inline-block;
 
-  &:not(:last-child) {
+.buttons-list-item :not(last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background:var(--our-tem-color);
+    }
   }
-}
 
 .buttons-list-item-btn {
   display: inline-block;
