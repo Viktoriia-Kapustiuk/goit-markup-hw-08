@@ -18,7 +18,7 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -99,7 +99,7 @@ body {
   overflow: hidden;
 }
 
-.auth-nav-item, .navigation, .modal-form-input-policy, .modal-form-check-policy, .close-btn, .footer-form-btn, .icon-link, .our-clients-icon {
+.auth-nav-item, .navigation, .modal-form-input-policy, .modal-form-check-policy, .close-btn, .footer-form-btn, .icon-link, .our-clients-item .our-clients-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +108,7 @@ body {
           align-items: center;
 }
 
-.close-btn, .footer-form-btn, .about-us-title, .product-label, .icon-link, .our-clients-icon {
+.close-btn, .footer-form-btn, .about-us-title, .product-label, .icon-link, .our-clients-item .our-clients-icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1266,13 +1266,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: calc((100% - 1 * 30px) / 2);
   text-decoration: none;
-  margin: 0 15px 30px 15px;
   height: 90px;
-  width: 210px;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-.our-clients-link {
+.our-clients-item .our-clients-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1298,33 +1299,31 @@ body {
   transition: color var(--duration) var(--cubic), border-color var(--duration) var(--cubic);
 }
 
-.our-clients-link:hover, .our-clients-link:focus {
+.our-clients-item .our-clients-link:hover, .our-clients-item .our-clients-link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.our-clients-icon {
+.our-clients-item .our-clients-icon {
   fill: currentColor;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-clients-icon:hover, .our-clients-icon:focus {
+.our-clients-item .our-clients-icon:hover, .our-clients-item .our-clients-icon:focus {
   color: var(--accent-color);
 }
 
-.our-client-list {
+.our-clients-item .our-client-list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  margin-bottom: -30px;
 }
 
-.our-clients {
+.our-clients-item .our-clients {
   padding-top: 60px;
   padding-bottom: 60px;
 }
