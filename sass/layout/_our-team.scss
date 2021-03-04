@@ -104,7 +104,7 @@
   border-radius: 0px 0px 4px 4px;
 
   @media screen and (max-width: 480px - 1px) {
-    min-width: 320px;
+    min-width: 100%;
   }
 }
 .our-team-list-item:not(:last-child) {
