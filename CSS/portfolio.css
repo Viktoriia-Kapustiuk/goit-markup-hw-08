@@ -36,11 +36,6 @@ body {
   font-style: normal;
 }
 
-.main {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
   min-width: 290px;
   width: 100%;
@@ -610,7 +605,7 @@ body {
 }
 
 /* Hero Portfolio*/
-.nav-menu {
+.buttons-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,6 +615,13 @@ body {
       -ms-flex-pack: start;
           justify-content: start;
   margin-bottom: 40px;
+}
+
+.buttons-list-item:not(last-child) {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background: var(--our-tem-color);
 }
 
 .buttons-list-item-btn {

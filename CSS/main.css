@@ -18,6 +18,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -34,12 +36,8 @@ body {
   font-style: normal;
 }
 
-.main {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
+  min-width: 290px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -150,16 +148,8 @@ body {
 }
 
 .modal-btn {
-  padding: 10px 32px;
-  width: 200px;
   display: inline-block;
   text-align: center;
-  min-width: 200px;
-  font-family: var(--text-font);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  border-radius: 4px;
   color: var(--white-text-color);
   background: var(--accent-color);
   cursor: pointer;
@@ -170,6 +160,20 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--cub);
           transition-timing-function: var(--cub);
+  min-width: 100px;
+  font-size: 12;
+  padding: 10px 32px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-btn {
+    min-width: 200px;
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    border-radius: 4px;
+  }
 }
 
 .modal-form-btn {
@@ -644,7 +648,7 @@ body {
 
 .footer-icons {
   margin: 0 auto;
-  width: 206px;
+  max-width: 206px;
   margin-bottom: 60px;
 }
 
@@ -673,8 +677,6 @@ body {
 
 .icon-list-item .dark-them {
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .icon-list-item .dark-them:hover, .icon-list-item .dark-them:focus {
@@ -729,6 +731,10 @@ body {
 }
 
 /* header*/
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .auth-nav-list {
   display: none;
 }
@@ -916,43 +922,92 @@ body {
 }
 
 .hero-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-side {
+    max-width: 360px;
+  }
 }
 
 .overlay {
-  height: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/optimg/mobile/mobHeader.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/optimg/mobile/mobHeader.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/mobile/mobHeader.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/mobile/mobHeader.jpg);
   background-size: cover;
   background-position: center;
   background-color: #c4c4c4;
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-width: 480px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4))), url(/images/optimg/mobile/mobHeader@2x.jpg);
-    background-image: linear-gradient(to right rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/optimg/mobile/mobHeader@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/mobHeader@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/mobHeader@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/tablet/tablet-header.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/tablet/tablet-header.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/tablet/tablet-header@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/tablet/tablet-header@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/desktop/desktHeaderImg.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/desktop/desktHeaderImg.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/optimg/desktop/desktHeaderImg@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/optimg/desktop/desktHeaderImg@2x.jpg);
   }
 }
 
 .title {
+  font-size: 15px;
   text-align: center;
   margin-bottom: 30px;
-  font-family: var(--text-font);
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.364;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  font-family: var(--text-font);
+}
+
+@media screen and (min-width: 480px) {
+  .title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.364;
+    letter-spacing: 0.06em;
+    width: 480px;
+  }
 }
 
 /* items */
@@ -1019,6 +1074,12 @@ body {
 /* about us */
 .about-us {
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1199px) {
+  .about-us {
+    display: none;
+  }
 }
 
 .about-us-title,
@@ -1091,11 +1152,17 @@ body {
 
 .our-team-list-item {
   margin: 0 auto;
-  width: 450px;
+  width: 100%;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--white-text-color);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 479px) {
+  .our-team-list-item {
+    min-width: 100%;
+  }
 }
 
 .our-team-list-item:not(:last-child) {
@@ -1117,11 +1184,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-}
-
-.our-team-list-item-img {
-  width: 100%;
-  height: 460px;
 }
 
 .our-team-title-names {
