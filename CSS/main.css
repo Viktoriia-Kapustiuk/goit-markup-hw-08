@@ -1285,13 +1285,13 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .our-clients-item .our-clients-item:nth-child(2n + 2) {
+  .our-clients-item:nth-child(2n + 2) {
     margin-right: 0px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .our-clients-item .our-clients-item:nth-child(n + 5) {
+  .our-clients-item:nth-child(n + 5) {
     margin-bottom: 0px;
   }
 }
