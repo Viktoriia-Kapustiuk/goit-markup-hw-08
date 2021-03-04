@@ -46,7 +46,6 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -102,7 +101,7 @@ body {
   overflow: hidden;
 }
 
-.auth-nav-item, .footer-form-box, .footer-form-btn, .navigation, .icon-link {
+.auth-nav-item, .footer-form-btn, .navigation, .icon-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,13 +195,19 @@ body {
 }
 
 /* Footer Form */
+.footer-title {
+  text-align: center;
+}
+
 .footer-form {
-  width: 570px;
-  height: 86px;
-  margin-left: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-form-text {
+  display: block;
+  margin: 0 auto;
   width: 219px;
   height: 16px;
   margin-bottom: 20px;
@@ -216,10 +221,12 @@ body {
 }
 
 .footer-form-input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -231,6 +238,8 @@ body {
 }
 
 .footer-form-btn {
+  display: block;
+  margin: 0 auto;
   min-width: 200px;
   height: 50px;
   font-weight: 700;
@@ -273,7 +282,8 @@ body {
 }
 
 .logotype-dark-theme {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
   color: var(--white-text-color);
 }
@@ -323,24 +333,19 @@ body {
 }
 
 /* LAYOUT */
-.address {
-  font-style: normal;
-  color: var(--white-text-color);
-}
-
-/* footer */
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
 }
 
 .footer-icons {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-left: 70px;
+  margin: 0 auto;
   width: 206px;
+  margin-bottom: 60px;
 }
 
 .icon-link .dark-them {
@@ -350,7 +355,7 @@ body {
 /* footer-icons */
 .footer-title {
   color: var(--white-text-color);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: var(--text-font);
   font-size: 14px;
   font-weight: 700;
@@ -358,6 +363,12 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text-color);
+}
+
+.address-list {
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .icon-list-item .dark-them {
@@ -381,7 +392,7 @@ body {
 
 .address-list-item:not(:last-child) {
   min-width: 231px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .address-list-item-link {
@@ -390,7 +401,7 @@ body {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--text-color-accent);
+  color: var(--white-text-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -709,6 +720,7 @@ body {
 /* our team */
 .our-team {
   padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
 }
 
@@ -743,7 +755,7 @@ body {
 }
 
 .our-team-list-item-img {
-  width: 450px;
+  width: 100%;
   height: 460px;
 }
 
