@@ -1017,9 +1017,9 @@ body {
   .title {
     font-weight: 900;
     font-size: 26px;
-    line-height: 1.364;
+    line-height: 1.615;
     letter-spacing: 0.06em;
-    width: 480px;
+    max-width: 360px;
   }
 }
 
