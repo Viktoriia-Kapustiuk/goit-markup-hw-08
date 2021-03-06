@@ -62,12 +62,6 @@
   margin-right: auto;
   text-align: center;
   width: 100%;
-  @media screen and (min-width: 479px), (max-width: 767px) {
-    max-width: 360px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 696px;
-  }
 }
 
 .overlay {

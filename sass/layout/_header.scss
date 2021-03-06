@@ -8,11 +8,19 @@
   display: flex;
 }
 
-.navigation-list {
-  display: none;
+@media screen and (max-width: 767px) {
+  .auth-nav {
+    display: none;
+  }
+  .navigation-list {
+    display: none;
+  }
 }
-.auth-nav {
-  display: none;
+
+@media screen and (max-width: 767px) {
+  .auth-nav-list {
+    margin-left: 84px;
+  }
 }
 
 // @media screen and (max-width: 767px) {

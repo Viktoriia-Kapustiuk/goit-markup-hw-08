@@ -69,27 +69,22 @@
 //     max-width: 480px;
 //   }
 // }
-.items {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
-.items-list {
-  // display: flex;
-  // flex-direction: column;
-  // @media screen and(min-width:768px) {
-  //   flex-wrap: wrap;
-  //   margin: -15px;
-  // }
-  margin: 0px;
-  padding: 0px;
-  border-style: none;
-  justify-content: center;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
+// .items-list {
+// display: flex;
+// flex-direction: column;
+// @media screen and(min-width:768px) {
+//   flex-wrap: wrap;
+//   margin: -15px;
+// }
+//   margin: -15px;
+//   border-style: none;
+//   justify-content: center;
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+// }
 
 // .box-adv {
 //         margin: 0px;
@@ -100,10 +95,35 @@
 //             display: flex;
 //             flex-wrap: wrap;
 //         }
-//     }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//     }
 
+.items {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+// @media screen and (min-width: 480px) and (max-width: 767px) {
+//   .items-list {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+@media screen and(min-width:768px) {
+  .items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .items-list-item {
+    display: inline-block;
+    max-width: 354px;
+    margin: 15px;
+  }
+}
 .items-list-item {
-  margin: 0;
+  // margin: 0;
   width: 100%;
 
   &::before {
@@ -116,22 +136,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px;
+    color: var(--icons-color);
   }
 }
 
-.items-list-item {
-  padding: 0px;
-  @media screen and (min-width: 767px) {
-    &:nth-child(odd) {
-      margin-right: 30px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &:nth-last-child(2) {
-      margin-left: 30px;
-    }
-  }
-}
+//   .items-list-item {
+//     padding: 0px;
+//     @media screen and (min-width: 767px) {
+//       &:nth-child(odd) {
+//         margin-right: 30px;
+//       }
+//     }
+//     @media screen and (min-width: 1200px) {
+//       &:nth-last-child(2) {
+//         margin-left: 30px;
+//       }
+//     }
+//   }
 
 .items-title {
   @include font($fw: 700);
@@ -142,6 +163,9 @@
   text-transform: uppercase;
   color: var(--title-color);
   text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }
 
 .icon-antenna::before {
@@ -167,5 +191,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin-bottom: 30px;
+  margin-top: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
