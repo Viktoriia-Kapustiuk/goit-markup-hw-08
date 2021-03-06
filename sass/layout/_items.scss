@@ -196,3 +196,28 @@
   color: var(--main-color);
   margin-top: 10px;
 }
+
+@media screen and(min-width:768px) {
+  .items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .items-list-item {
+    display: inline-block;
+    max-width: 354px;
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .items-list {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px;
+  }
+  .items-list-item {
+    max-width: 270px;
+    display: inline-block;
+    margin: 15px;
+  }
+}
