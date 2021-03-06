@@ -2,15 +2,30 @@
 .logotype {
   display: block;
   width: 134px;
-  height: 28px;
+  // height: 28px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
   text-decoration: none;
   letter-spacing: 0.03em;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   animation-duration: 1000ms;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    max-width: 145px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .logotype-light-theme {

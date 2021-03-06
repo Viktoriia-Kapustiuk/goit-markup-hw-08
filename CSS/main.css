@@ -99,7 +99,7 @@ body {
   overflow: hidden;
 }
 
-.auth-nav-item, .navigation, .modal-form-input-policy, .modal-form-check-policy, .close-btn, .footer-form-btn, .icon-link, .our-clients-icon {
+.auth-nav-item, .modal-form-input-policy, .modal-form-check-policy, .close-btn, .footer-form-btn, .navigation, .icon-link, .our-clients-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,15 +120,33 @@ body {
 .logotype {
   display: block;
   width: 134px;
-  height: 28px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
   text-decoration: none;
   letter-spacing: 0.03em;
+  padding-top: 16px;
+  padding-bottom: 16px;
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
+}
+
+@media screen and (min-width: 768px) {
+  .logotype {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logotype {
+    margin-right: 93px;
+    max-width: 145px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .logotype-light-theme {
@@ -204,11 +222,8 @@ body {
 }
 
 .auth-nav {
+  display: inline-block;
   margin-left: auto;
-}
-
-.auth-nav .auth-nav-item + .auth-nav-item {
-  margin-left: 30px;
 }
 
 .auth-nav-item {
@@ -228,10 +243,6 @@ body {
 
 .contacts-icon.tel {
   margin-right: 10px;
-}
-
-.navigation-list {
-  display: none;
 }
 
 .info {
@@ -742,8 +753,18 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.auth-nav-list {
-  display: none;
+@media screen and (max-width: 767px) {
+  .navigation-list {
+    display: none;
+  }
+  .auth-nav {
+    display: none;
+  }
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav {
@@ -785,7 +806,7 @@ body {
   -webkit-transform: translateX(-50%) translateY(-100%);
           transform: translateX(-50%) translateY(-100%);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 480px;
   background-color: #fff;
   -webkit-transition: -webkit-transform 300ms linear;
@@ -927,6 +948,45 @@ body {
   .auth-nav-list {
     display: inline-block;
   }
+}
+
+.navigation-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-list-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--cub);
+          transition-timing-function: var(--cub);
+}
+
+.navigation-list-link:hover, .navigation-list-link:focus {
+  color: var(--accent-color);
+}
+
+.navigation-list .navigation-list-link.current {
+  color: var(--accent-color);
 }
 
 /* hero*/
