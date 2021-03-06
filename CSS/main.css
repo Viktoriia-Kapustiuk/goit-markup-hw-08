@@ -612,6 +612,10 @@ body {
   background-color: #2f303a;
 }
 
+.footer .container {
+  display: block;
+}
+
 .footer-icons {
   margin: 0 auto;
   max-width: 206px;
