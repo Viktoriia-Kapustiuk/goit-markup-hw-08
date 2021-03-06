@@ -15,6 +15,13 @@
 //     margin-right: 8px;
 //   }
 // }
+@media screen and (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .nav-menu-btn {
   padding-top: 60px;
   padding-bottom: 40px;
@@ -66,10 +73,23 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
+/* Projects */
 
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and(min-width:768px) {
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .projects-list-item {
+    display: inline-block;
+    max-width: 354px;
+    margin: 15px;
+  }
+}
+
+.projects-list-item:nth-last-child(-n + 2) {
+  padding-bottom: 0;
 }
 
 .projects-list-item {

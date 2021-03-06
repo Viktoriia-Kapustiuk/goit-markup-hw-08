@@ -1063,7 +1063,7 @@ body {
 }
 
 /* items */
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.items {
+.items {
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 100%;
@@ -1102,12 +1102,15 @@ body {
   color: var(--icons-color);
 }
 
+.items-list-item:nth-last-child(-n + 2) {
+  margin-bottom: 30px;
+}
+
 .items-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.143;
   margin-top: 30px;
-  margin-bottom: 10px;
   font-family: var(--text-font);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -1145,10 +1148,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-color);
   margin-top: 10px;
-}
-
-.items-text:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 /* about us */
@@ -1394,6 +1393,12 @@ body {
 @media screen and (max-width: 767px) {
   .our-clients-item:nth-child(n + 5) {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-clients-item:nth-child(3n + 3) {
+    margin-right: 0px;
   }
 }
 

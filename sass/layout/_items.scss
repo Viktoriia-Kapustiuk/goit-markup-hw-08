@@ -95,7 +95,7 @@
 //             display: flex;
 //             flex-wrap: wrap;
 //         }
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//     }
+// }
 
 .items {
   padding-top: 60px;
@@ -138,6 +138,10 @@
     background-size: 70px;
     color: var(--icons-color);
   }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
+  }
 }
 
 //   .items-list-item {
@@ -157,7 +161,6 @@
 .items-title {
   @include font($fw: 700);
   margin-top: 30px;
-  margin-bottom: 10px;
   font-family: var(--text-font);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -192,8 +195,4 @@
   letter-spacing: 0.03em;
   color: var(--main-color);
   margin-top: 10px;
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
