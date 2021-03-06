@@ -37,6 +37,9 @@ body {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-width: 290px;
   width: 100%;
   padding-left: 15px;
@@ -99,7 +102,7 @@ body {
   overflow: hidden;
 }
 
-.auth-nav-item, .footer-form-btn, .navigation, .icon-link {
+.footer-form-btn, .navigation, .icon-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,30 +119,6 @@ body {
 }
 
 /* COMPONENTS */
-.auth-nav {
-  display: inline-block;
-  margin-left: auto;
-}
-
-.auth-nav-item {
-  margin-left: auto;
-  -webkit-transition: fill, 250ms, var(--cub);
-  transition: fill, 250ms, var(--cub);
-}
-
-.auth-nav-item:hover > svg,
-.auth-nav-item:focus > svg {
-  fill: var(--accent-color);
-}
-
-.contacts-icon.convert {
-  margin-right: 10px;
-}
-
-.contacts-icon.tel {
-  margin-right: 10px;
-}
-
 .address-list-item-link {
   font-family: var(--text-font);
   font-style: normal;
@@ -159,34 +138,6 @@ body {
   text-decoration: none;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.info {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.header .info {
-  display: block;
-  font-family: var(--text-font);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.143;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  color: var(--main-color);
-  -webkit-transition: color, 250ms, var(--cub);
-  transition: color, 250ms, var(--cub);
-}
-
-.info:hover, .info:focus {
-  color: var(--accent-color);
-}
-
-.info:hover > svg,
-.info:focus > svg {
-  fill: var(--accent-color);
 }
 
 /* Footer Form */
@@ -260,7 +211,6 @@ body {
 /* logo */
 .logotype {
   display: block;
-  width: 134px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 24px;
@@ -284,9 +234,10 @@ body {
 @media screen and (min-width: 1200px) {
   .logotype {
     margin-right: 93px;
-    max-width: 145px;
     padding-top: 24px;
     padding-bottom: 25px;
+    font-size: 26px;
+    line-height: 1.192;
   }
 }
 
@@ -344,9 +295,6 @@ body {
 
 /* LAYOUT */
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
@@ -441,27 +389,12 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (max-width: 767px) {
-  .navigation-list {
-    display: none;
-  }
-  .auth-nav {
-    display: none;
-  }
-  .header-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.navigation-list {
+  display: none;
 }
 
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.auth-nav {
+  display: none;
 }
 
 .burger-btn {
@@ -475,10 +408,10 @@ body {
   fill: var(--accent-color);
 }
 
+/* Mobile menu*/
 .mobile-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  overflow: scroll;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -493,9 +426,8 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-100%);
           transform: translateX(-50%) translateY(-100%);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  max-width: 480px;
   background-color: #fff;
   -webkit-transition: -webkit-transform 300ms linear;
   transition: -webkit-transform 300ms linear;
@@ -509,6 +441,9 @@ body {
 }
 
 .mobile-menu.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transform: translateX(-50%) translateY(0%);
           transform: translateX(-50%) translateY(0%);
 }
@@ -618,6 +553,7 @@ body {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+/* Mobile menu end */
 @media screen and (min-width: 768px) {
   .burger-btn {
     display: none;
@@ -633,8 +569,10 @@ body {
   .header {
     height: 80px;
   }
-  .auth-nav-list {
-    display: inline-block;
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -675,6 +613,17 @@ body {
 
 .navigation-list .navigation-list-link.current {
   color: var(--accent-color);
+}
+
+/* Contact info */
+.header .info {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.167;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  color: #757575;
 }
 
 /* Hero Portfolio*/
