@@ -47,7 +47,9 @@
 /* Mobile menu*/
 
 .mobile-menu {
-  display: flex;
+  // display: flex;
+  display: none;
+  overflow: scroll;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
@@ -56,9 +58,8 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  max-width: 480px;
   background-color: #fff;
 
   transition: transform 300ms linear;
@@ -71,6 +72,7 @@
 }
 
 .mobile-menu.is-open {
+  display: flex;
   transform: translateX(-50%) translateY(0%);
 }
 
