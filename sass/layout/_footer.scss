@@ -90,10 +90,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-}
 
-.footer .container {
-  display: block;
+  & .container {
+    display: block;
+  }
 }
 
 // .footer .logotype {
