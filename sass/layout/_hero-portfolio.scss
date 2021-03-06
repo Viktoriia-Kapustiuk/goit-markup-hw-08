@@ -73,32 +73,3 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
-/* Projects */
-
-@media screen and(min-width:768px) {
-  .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-  .projects-list-item {
-    display: inline-block;
-    max-width: 354px;
-    margin: 15px;
-  }
-}
-
-.projects-list-item:nth-last-child(-n + 2) {
-  padding-bottom: 0;
-}
-
-.projects-list-item {
-  margin: 0;
-  display: flex;
-  background: var(--white-text-color);
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  @media screen and (min-width: 479px), (max-width: 767px) {
-    width: 100%;
-  }
-}
