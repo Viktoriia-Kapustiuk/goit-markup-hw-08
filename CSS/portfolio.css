@@ -37,9 +37,6 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-width: 290px;
   width: 100%;
   padding-left: 15px;
@@ -246,6 +243,7 @@ body {
 }
 
 .logotype-dark-theme {
+  text-align: center;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -298,6 +296,12 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .footer .container {
@@ -391,6 +395,12 @@ body {
 /* header*/
 .header {
   border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navigation-list {
