@@ -332,6 +332,15 @@ body {
   color: var(--white-text-color);
 }
 
+.footer-form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* footer-icons */
 .footer-title {
   color: var(--white-text-color);
@@ -354,6 +363,12 @@ body {
 .address-list {
   display: block;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .address-list {
+    text-align: start;
+  }
 }
 
 .icon-list-item .dark-them {
@@ -523,7 +538,6 @@ body {
   .contact-info {
     margin-right: 70px;
     margin-bottom: 0;
-    width: 231px;
   }
 }
 
@@ -1070,7 +1084,7 @@ body {
   }
   .projects-list-item {
     display: inline-block;
-    max-width: 354px;
+    max-width: 370px;
     margin: 15px;
   }
 }

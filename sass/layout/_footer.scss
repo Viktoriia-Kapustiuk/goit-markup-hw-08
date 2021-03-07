@@ -114,6 +114,11 @@
 .icon-link .dark-them {
   color: var(--white-text-color);
 }
+
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+}
 /* footer-icons */
 .footer-title {
   color: var(--white-text-color);
@@ -134,6 +139,9 @@
 .address-list {
   display: block;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .icon-list-item .dark-them {
@@ -261,7 +269,7 @@
   .contact-info {
     margin-right: 70px;
     margin-bottom: 0;
-    width: 231px;
+    // width: 231px;
   }
 }
 
