@@ -24,6 +24,7 @@
 
   position: absolute;
   width: 100%;
+  max-width: 450px;
   max-height: 609px;
   left: 50%;
   top: 50%;
@@ -167,7 +168,7 @@
   font-size: 16px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  min-width: 370px;
+  // min-width: 370px;
   height: 60px;
 
   margin-bottom: 12px;
