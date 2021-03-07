@@ -6,6 +6,9 @@
 
 .header-nav {
   display: flex;
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 
   @media screen and (min-width: 768px) {
     align-items: center;
@@ -19,6 +22,9 @@
 
   .navigation-list {
     display: none;
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }
 
@@ -73,6 +79,7 @@
 //   display: flex;
 //   justify-content: space-between;
 // }
+
 .burger-btn {
   background-color: transparent;
   padding: 0;
@@ -196,9 +203,9 @@
   color: #757575;
 }
 
-// .navigation-list &.current {
-//   color: var(--accent-color);
-// }
+.navigation-list-link.current {
+  color: var(--accent-color);
+}
 
 .mobile-list-auth {
   padding-bottom: 64px;
@@ -255,110 +262,93 @@
     display: flex;
   }
 
+  .navigation {
+    @extend %flex;
+  }
+
+  .navigation-list-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .navigation-list-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: block;
+
+    font-family: var(--text-font);
+    @include font();
+    letter-spacing: 0.02em;
+    color: var(--title-color);
+    text-decoration: none;
+    position: relative;
+
+    cursor: pointer;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cub);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    .navigation-list &.current {
+      color: var(--accent-color);
+    }
+  }
+
+  .auth-nav-list {
+    list-style: none;
+  }
+
+  /* Contact info */
+
   // .auth-nav {
-  //   display: block;
+  //   display: inline-block;
+  //   margin-left: auto;
+  // & .auth-nav-item + .auth-nav-item {
+  //   margin-left: 30px;
   // }
-}
+  // }
 
-.navigation {
-  @extend %flex;
-}
+  // .auth-nav-item {
+  //   @extend %flex;
+  //   margin-left: auto;
 
-.navigation-list-item {
-  display: flex;
+  //   transition: fill, 250ms, var(--cub);
 
-  &:not(:last-child) {
-    margin-right: 50px;
+  // }
+
+  .info {
+    display: block;
+
+    .header & {
+      display: block;
+      font-family: var(--text-font);
+      @include font();
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      color: var(--main-color);
+
+      transition: color, 250ms, var(--cub);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    &:hover > svg,
+    &:focus > svg {
+      fill: var(--accent-color);
+    }
   }
-}
-
-.navigation-list-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  display: block;
-
-  font-family: var(--text-font);
-  @include font();
-  letter-spacing: 0.02em;
-  color: var(--title-color);
-  text-decoration: none;
-  position: relative;
-
-  cursor: pointer;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cub);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-
-  .navigation-list &.current {
-    color: var(--accent-color);
-  }
-}
-
-/* Contact info */
-
-// .auth-nav {
-//   display: inline-block;
-//   margin-left: auto;
-// & .auth-nav-item + .auth-nav-item {
-//   margin-left: 30px;
-// }
-// }
-
-// .auth-nav-item {
-//   @extend %flex;
-//   margin-left: auto;
-
-//   transition: fill, 250ms, var(--cub);
-
-//   &:hover > svg,
-//   &:focus > svg {
-//     fill: var(--accent-color);
-//   }
-// }
-
-// .info {
-//   display: block;
-//
-
-//   .header & {
-//     display: block;
-//     font-family: var(--text-font);
-//     @include font();
-//     text-decoration: none;
-//     letter-spacing: 0.02em;
-//     color: var(--main-color);
-
-//     transition: color, 250ms, var(--cub);
-//   }
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-
-//   &:hover > svg,
-//   &:focus > svg {
-//     fill: var(--accent-color);
-//   }
-// }
-
-.header .info {
-  font-family: var(--text-font);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.167;
-  /* identical to box height */
-
-  letter-spacing: 0.02em;
-
-  color: #757575;
 
   @media screen and (min-width: 768px) {
     font-size: 12px;

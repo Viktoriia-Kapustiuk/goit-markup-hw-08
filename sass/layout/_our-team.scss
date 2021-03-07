@@ -136,9 +136,13 @@
     max-width: 270px;
   }
 }
-// .our-team-list-item:not(:last-child) {
-//   margin-bottom: 30px;
-// }
+
+@media screen and (min-width: 479px) and (max-width: 767px) {
+  .our-team-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .our-team-list-item:nth-last-child(-n + 2) {
   padding-bottom: 0;
 }

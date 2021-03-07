@@ -37,6 +37,9 @@
   margin: 0 auto;
   margin-bottom: 20px;
   color: var(--white-text-color);
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 // .header .logotype {

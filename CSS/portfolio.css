@@ -250,6 +250,12 @@ body {
   color: var(--white-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .logotype-dark-theme {
+    text-align: start;
+  }
+}
+
 .logo-web {
   color: var(--accent-color);
   font-style: normal;
@@ -405,6 +411,12 @@ body {
 .address-list-item-link-mail:hover,
 .address-list-item-link-mail:focus {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 479px) {
+  .contact-info {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 1199px) {
@@ -569,6 +581,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -857,7 +877,37 @@ body {
   color: var(--accent-color);
 }
 
+.auth-nav-list {
+  list-style: none;
+}
+
 /* Contact info */
+.info {
+  display: block;
+}
+
+.header .info {
+  display: block;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.143;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+  -webkit-transition: color, 250ms, var(--cub);
+  transition: color, 250ms, var(--cub);
+}
+
+.info:hover, .info:focus {
+  color: var(--accent-color);
+}
+
+.info:hover > svg,
+.info:focus > svg {
+  fill: var(--accent-color);
+}
+
 .header .info {
   font-family: var(--text-font);
   font-weight: 500;
