@@ -6,20 +6,54 @@
 
 .header-nav {
   display: flex;
-}
 
-@media screen and (max-width: 767px) {
-  .auth-nav {
-    display: none;
-  }
-  .navigation-list {
-    display: none;
+  @media screen and (min-width: 768px) {
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 767px) {
   .auth-nav-list {
-    margin-left: 84px;
+    display: none;
+  }
+
+  .navigation-list {
+    display: none;
+  }
+}
+
+.auth-nav-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.auth-nav-item {
+  @media screen and(min-width:768px) {
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    @media screen and(min-width:768px) {
+      margin-bottom: 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    margin-right: 30px;
   }
 }
 
@@ -204,12 +238,15 @@
   .burger-btn {
     display: none;
   }
+
   .mobile-menu {
     display: none;
   }
+
   .navigation-list {
     display: flex;
   }
+
   .header {
     height: 80px;
   }
@@ -217,6 +254,7 @@
   .header-nav {
     display: flex;
   }
+
   // .auth-nav {
   //   display: block;
   // }
@@ -287,8 +325,7 @@
 
 // .info {
 //   display: block;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
+//
 
 //   .header & {
 //     display: block;
@@ -312,14 +349,6 @@
 //   }
 // }
 
-// .contacts-icon.convert {
-//   margin-right: 10px;
-// }
-
-// .contacts-icon.tel {
-//   margin-right: 10px;
-// }
-
 .header .info {
   font-family: var(--text-font);
   font-weight: 500;
@@ -330,4 +359,24 @@
   letter-spacing: 0.02em;
 
   color: #757575;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+
+  .contacts-icon.convert {
+    margin-right: 10px;
+  }
+
+  .contacts-icon.tel {
+    margin-right: 10px;
+  }
 }
