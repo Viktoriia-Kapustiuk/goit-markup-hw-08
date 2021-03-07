@@ -191,7 +191,7 @@
   }
 }
 
-@media screen and(min-width:480px) {
+@media screen and(min-width:480px) and (max-width: 1199px) {
   .contact-info {
     align-items: center;
     text-align: center;
@@ -248,7 +248,7 @@
 
 @media screen and(min-width: 1200px) {
   .contact-info {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
