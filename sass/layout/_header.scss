@@ -172,6 +172,10 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 320px) {
+    font-size: 30px;
+  }
 }
 
 .mob-menu-nav-link:not(last-child) {
@@ -190,6 +194,9 @@
 
   color: var(--accent-color);
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .mobile-link-mail {
