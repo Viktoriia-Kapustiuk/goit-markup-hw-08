@@ -245,7 +245,6 @@ body {
 .logotype-dark-theme {
   text-align: center;
   display: block;
-  margin: 0 auto;
   margin-bottom: 20px;
   color: var(--white-text-color);
 }
@@ -412,6 +411,13 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .address-list-item-link-tel,
+  .address-list-item-link-mail {
+    text-align: start;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .contact-info {
     margin-bottom: 60px;
@@ -456,7 +462,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-info {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -498,9 +504,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -518,9 +521,9 @@ body {
 
 @media screen and (min-width: 1200px) {
   .contact-info {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    margin-right: 70px;
+    margin-bottom: 0;
+    width: 231px;
   }
 }
 
@@ -538,8 +541,9 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -568,6 +572,11 @@ body {
   .footer-form-input {
     width: 358px;
     margin-right: 12px;
+  }
+  .footer-form-text {
+    display: block;
+    margin: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -889,7 +898,12 @@ body {
   }
   /* Contact info */
   .info {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header .info {
     display: block;

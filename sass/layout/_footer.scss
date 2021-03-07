@@ -191,6 +191,12 @@
   }
 }
 
+@media screen and(min-width:1200px) {
+  .address-list-item-link-tel,
+  .address-list-item-link-mail {
+    text-align: start;
+  }
+}
 @media screen and(max-width:479px) {
   .contact-info {
     margin-bottom: 60px;
@@ -217,7 +223,7 @@
   }
 }
 
-@media screen and(min-width:768px) {
+@media screen and(min-width:768px) and (max-width: 1199px) {
   .contact-info {
     align-items: center;
     text-align: center;
@@ -239,7 +245,7 @@
   }
   .address-list {
     flex-direction: column;
-    display: flex;
+    // display: flex;
     margin: 0;
     align-items: center;
   }
@@ -253,7 +259,9 @@
 
 @media screen and(min-width: 1200px) {
   .contact-info {
-    justify-content: flex-start;
+    margin-right: 70px;
+    margin-bottom: 0;
+    width: 231px;
   }
 }
 
@@ -263,7 +271,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
@@ -290,5 +298,10 @@
   .footer-form-input {
     width: 358px;
     margin-right: 12px;
+  }
+  .footer-form-text {
+    display: block;
+    margin: 0px;
+    margin-bottom: 20px;
   }
 }
