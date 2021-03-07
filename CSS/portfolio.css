@@ -861,6 +861,12 @@ body {
   padding-right: 10px;
 }
 
+@media screen and (min-width: 320px) {
+  .mobile-link {
+    font-size: 12px;
+  }
+}
+
 /* Mobile menu end */
 @media screen and (min-width: 768px) {
   .burger-btn {

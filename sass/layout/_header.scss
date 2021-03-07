@@ -245,11 +245,10 @@
 
   color: hsl(207, 90%, 54%);
   padding-right: 10px;
-  // padding-left: 10px;
 
-  // &:not(last-child) {
-  //   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  // }
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+  }
 }
 
 /* Mobile menu end */

@@ -150,20 +150,6 @@
   }
 }
 
-//   .items-list-item {
-//     padding: 0px;
-//     @media screen and (min-width: 767px) {
-//       &:nth-child(odd) {
-//         margin-right: 30px;
-//       }
-//     }
-//     @media screen and (min-width: 1200px) {
-//       &:nth-last-child(2) {
-//         margin-left: 30px;
-//       }
-//     }
-//   }
-
 .items-title {
   @include font($fw: 700);
   margin-top: 30px;
