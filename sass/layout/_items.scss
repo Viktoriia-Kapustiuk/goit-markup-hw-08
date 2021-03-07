@@ -144,6 +144,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .items-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 //   .items-list-item {
 //     padding: 0px;
 //     @media screen and (min-width: 767px) {
